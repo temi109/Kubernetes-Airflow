@@ -1,7 +1,7 @@
 # Export values for airflow docker image
 
 export IMAGE_NAME=my-dags
-export IMAGE_TAG=0.0.5
+export IMAGE_TAG=0.0.7
 export NAMESPACE=airflow
 export RELEASE_NAME=airflow
 
