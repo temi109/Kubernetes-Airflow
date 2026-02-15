@@ -13,7 +13,12 @@ with DAG(
     def print_hello():
         time.sleep(5)
         print("Hello world!")
+
+    @task
+    def print_goodbye():
+        time.sleep(5)
+        print("Goodbye world!")
         
 
-    print_hello()
+    print_hello() >> print_goodbye()
     

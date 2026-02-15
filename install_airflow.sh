@@ -27,6 +27,11 @@ kind load docker-image $IMAGE_NAME:$IMAGE_TAG --name airflow-cluster
 kubectl create namespace $NAMESPACE
 
 
+# Apply Kubernetes secrets for git sync
+
+kubectl apply -f k8s/secrets/git-secrets.yml
+
+
 # Install airflow using helm
 
 helm install $RELEASE_NAME apache-airflow/airflow  \
